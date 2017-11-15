@@ -4,10 +4,10 @@ var connection;
 
 if (process.env.NODE_ENV == 'development'){
 	connection = mysql.createConnection({
-	  host     : 'localhost',
-	  user     : 'root',
-	  password : 'Tabletable1',
-	  database : 'MySql'
+	  host     : process.env.DB_HOST,
+	  user     : process.env.DB_USER,
+	  password : process.env.DB_PASS,
+	  database : process.env.DB_DB,
 	});
 } else {
 	connection = mysql.createConnection({
