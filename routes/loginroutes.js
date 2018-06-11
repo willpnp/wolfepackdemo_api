@@ -10,7 +10,7 @@ var connectionParams = {
 }
 
 if (process.env.NODE_ENV != 'development'){
-	connectionParams[port] = process.env.DB_PORT
+	connectionParams.port = process.env.DB_PORT
 }
 
 connection = mysql.createConnection(connectionParams);
