@@ -71,7 +71,7 @@ exports.login = function(req,res){
           if (doesMatch){
             res.send({
             "code":200,
-            "success":"login sucessfull"
+            "success":"login successful"
             });
           } else {
             res.send({
@@ -83,7 +83,7 @@ exports.login = function(req,res){
       } else {
         res.send({
           "code":204,
-          "success":"Email does not exits"
+          "success":"Email does not exist"
         });
       }
     }
